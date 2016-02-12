@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_search.png",
+        "source": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_search.png",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_search.png",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_search.png",
+        "source": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    }
+]

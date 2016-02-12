@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/layout/activity_ajpd_soft_my_sql.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/src/main/res/layout/activity_ajpd_soft_my_sql.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/layout/articulos_activity.xml",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/layout/articulos_activity.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/layout/activity_activity__configuracion.xml",
+        "source": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/src/main/res/layout/activity_activity__configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/layout/activity_activity__configuracion.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/src/main/res/layout/activity_activity__configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/layout/activity_activity__configuracion.xml",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/layout/activity_activity__configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_acerca_de.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_acerca_de.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/layout/activity_ajpd_soft_my_sql.xml",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/layout/activity_ajpd_soft_my_sql.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_grid.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_grid.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/layout/activity_ajpd_soft_my_sql.xml",
+        "source": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/src/main/res/layout/activity_ajpd_soft_my_sql.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_principal.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_principal.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/layout/activity_grid.xml",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/layout/activity_grid.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/articulos_activity.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/articulos_activity.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_configuracion.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_configuracion.xml"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/login2/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/login2/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/pedidos_layou.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/pedidos_layou.xml"
+    }
+]

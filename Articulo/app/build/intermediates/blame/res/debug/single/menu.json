@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/menu/activity_ajpd_soft_my_sql.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/src/main/res/menu/activity_ajpd_soft_my_sql.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/menu/activity_ajpd_soft_my_sql.xml",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/menu/activity_ajpd_soft_my_sql.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/menu/activity_menu_ppal.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/menu/activity_menu_ppal.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/Articulo/app/build/intermediates/res/merged/debug/menu/activity_activity__configuracion.xml",
+        "source": "/home/pimpo/0_proyecto/Articulo/app/src/main/res/menu/activity_activity__configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/menu/activity_activity__configuracion.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AjpdSoftMySQLAndroid/app/src/main/res/menu/activity_activity__configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/menu/activity_ajpd_soft_my_sql.xml",
+        "source": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/src/main/res/menu/activity_ajpd_soft_my_sql.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/menu/activity_menu__configuracion.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/menu/activity_menu__configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/build/intermediates/res/merged/debug/menu/activity_activity__configuracion.xml",
+        "source": "/home/pimpo/0_proyecto/AjpdSoftMySQLAndroid/app/src/main/res/menu/activity_activity__configuracion.xml"
+    }
+]
