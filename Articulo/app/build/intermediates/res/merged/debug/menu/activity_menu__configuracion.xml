@@ -1,7 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_guardar_configuracion"
-        android:title="@string/text_menu_guardar_configuracion"
-        android:orderInCategory="100"/>
-    <item android:id="@+id/menu_acerca_de" 
-        android:title="@string/text_acercade"></item>
-</menu>
