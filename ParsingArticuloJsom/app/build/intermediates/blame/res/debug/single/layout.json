@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/ParsingArticuloJsom/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/ParsingArticuloJsom/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Gson_SimpleParsing1/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Gson_SimpleParsing1/app/src/main/res/layout/activity_main.xml"
+    }
+]

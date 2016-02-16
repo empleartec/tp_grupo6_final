@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Implementar-Parcelable-master/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Implementar-Parcelable-master/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Implementar-Parcelable-master/app/build/intermediates/res/merged/debug/menu/second.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Implementar-Parcelable-master/app/src/main/res/menu/second.xml"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/JsonListView/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/JsonListView/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AndroidJsonListView-master/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AndroidJsonListView-master/app/src/main/res/layout/list_item.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AndroidJsonListView-master/app/build/intermediates/res/merged/debug/layout/activity_single_contact.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AndroidJsonListView-master/app/src/main/res/layout/activity_single_contact.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/AndroidJsonListView-master/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/AndroidJsonListView-master/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/JsonListView/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/JsonListView/app/src/main/res/layout/list_item.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/JsonListView/app/build/intermediates/res/merged/debug/layout/activity_single_contact.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/JsonListView/app/src/main/res/layout/activity_single_contact.xml"
+    }
+]

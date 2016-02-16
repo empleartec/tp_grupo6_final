@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/ActivityResult/app/build/intermediates/res/merged/debug/layout/layout2.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/ActivityResult/app/src/main/res/layout/layout2.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/ActivityResult/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/ActivityResult/app/src/main/res/layout/activity_main.xml"
+    }
+]
