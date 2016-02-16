@@ -39,13 +39,11 @@
             android:label="Acerca de" >
 
         </activity>
-
         <activity
             android:name="com.example.ferreteria.Activity_Pedidos"
             android:label="Pedidos" >
 
         </activity>
-
 
     </application>
 

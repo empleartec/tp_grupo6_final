@@ -38,7 +38,6 @@ public class Activity_Articulo extends Activity {
     private GridView gridView;
     private TextView art_sel;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -243,6 +242,5 @@ public class Activity_Articulo extends Activity {
         finish();
 
     }
-
 
     }//fin

@@ -369,7 +369,7 @@ public class Main_Activity extends Activity
     {
       super.onDestroy();
       //guardarConfiguracion();
-    }  
+    }
     
     //en el evento "Abrir aplicación" leemos los datos de 
     //configuración del fichero xml
