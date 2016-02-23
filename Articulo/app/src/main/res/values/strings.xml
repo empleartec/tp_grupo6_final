@@ -27,5 +27,12 @@
 	<string name="text_SQL_Ejecutar">Introduzca consulta SQL</string>
 	<string name="Str_buscar">Buscar</string>
 	<string name="acerca_de_txt">Proyecto del curso de Android</string>
+	<string name="txt_agrega_art">Agregar</string>
+	<string name="id_string">id1</string>
+	<string name="product_string">nose</string>
+	<string name="quantity_string">aaa</string>
+	<string name="add_string" />
+	<string name="find_string" />
+	<string name="delete_string" />
 
 </resources>

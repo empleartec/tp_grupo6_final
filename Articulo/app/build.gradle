@@ -21,4 +21,5 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:18.0.0'
     compile files('libs/mysql-connector-java-5.1.24-bin.jar')
+    compile 'com.google.code.gson:gson:2.5'
 }

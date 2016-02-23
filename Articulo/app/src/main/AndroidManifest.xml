@@ -45,6 +45,16 @@
 
         </activity>
 
+        <activity
+            android:name="com.example.ferreteria.Activity_tabla"
+            android:label="Tabla" >
+
+        </activity>
+        <activity
+            android:name="com.example.ferreteria.Conectar"
+            android:label="Coneto Pedido" >
+
+        </activity>
     </application>
 
 </manifest>

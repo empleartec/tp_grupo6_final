@@ -406,7 +406,7 @@ public class Main_Activity extends Activity
 
 	public void Trae_articulos(View view) {
 		Intent i = new Intent(Main_Activity.this,
-				Activity_Articulo.class);
+				Conectar.class);
 		startActivity(i);
 
 	}
