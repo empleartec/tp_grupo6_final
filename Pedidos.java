@@ -1,11 +1,12 @@
 package com.example.ferreteria;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Pedidos {
+public class Pedidos  implements Serializable {
 	
 	private int cliente_id;
 	private String sku;
