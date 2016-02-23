@@ -37,12 +37,13 @@ public class Activity_Articulo extends Activity {
     private List<String> strList;
     private GridView gridView;
     private TextView art_sel;
+    public Articulo art_pedido;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.articulos_activity);
-
+        art_pedido=new Articulo();
         initData();
         initView();
 
@@ -116,10 +117,14 @@ public class Activity_Articulo extends Activity {
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 
                 int pos = gridView.getSelectedItemPosition();
-                Toast.makeText(getBaseContext(), strList.get(position),
-                        Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getBaseContext(), strList.get(position),
+                 //       Toast.LENGTH_SHORT).show();
                 String cadena = (String) strList.get(position);
                 art_sel.setText(cadena);
+                String sku = (String) strList.get(position-1);
+                art_pedido.setTxt_DESCRIPCION(cadena);
+                art_pedido.setTxt_ART_MARCA("AGME");
+                art_pedido.setTxt_ARTICULO_SKU(sku);
             }
 
         });
@@ -222,20 +227,13 @@ public class Activity_Articulo extends Activity {
 
     public void retorna_articulo(View v)
     {
-       /* String cad = "10000000001";
-        Intent data = new Intent(Activity_Articulo.this,
-                Activity_Pedidos.class);
-        data.setData(Uri.parse(cad));
-        setResult(RESULT_OK, data);
 
-        finish();*/
-
-        // get the Entered  message
+        /***********************/
         String message=art_sel.getText().toString();
         Intent intentMessage=new Intent();
-
+        intentMessage.putExtra("MESSAGE",art_pedido );
         // put the message in Intent
-        intentMessage.putExtra("MESSAGE", message);
+     //->ok   intentMessage.putExtra("MESSAGE", message);
         // Set The Result in Intent
         setResult(2,intentMessage);
         // finish The activity
