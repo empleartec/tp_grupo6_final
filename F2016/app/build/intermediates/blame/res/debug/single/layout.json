@@ -1,14 +1,74 @@
 [
     {
-        "merged": "/home/pimpo/AndroidStudioProjects/login2/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/home/pimpo/AndroidStudioProjects/login2/app/src/main/res/layout/main.xml"
-    },
-    {
         "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/main.xml",
         "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/main.xml"
     },
     {
-        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/pedidos_layou.xml",
-        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/pedidos_layou.xml"
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_pedidos.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_pedidos.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activity_configuracion.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activity_configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activity_grid.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activity_grid.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activity_principal.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activity_principal.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activity_acerca_de.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activity_acerca_de.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/articulos_activity.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/articulos_activity.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_acerca_de.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_acerca_de.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_table.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_table.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_grid.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_grid.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activyty_conecta.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activyty_conecta.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activyty_conecta.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activyty_conecta.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activity_pedidos.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activity_pedidos.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_principal.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_principal.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/activity_configuracion.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/activity_configuracion.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/layout/articulos_activity.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/layout/articulos_activity.xml"
+    },
+    {
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/layout/activity_table.xml",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/layout/activity_table.xml"
     }
 ]

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.login2.test">
+    package="com.example.ferreteria.test">
 
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7" />
+    <uses-sdk android:minSdkVersion="6" android:targetSdkVersion="8" />
 
     <application>
         <uses-library android:name="android.test.runner" />
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.example.login2"
+                     android:targetPackage="com.example.ferreteria"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.example.login2"/>
+                     android:label="Tests for com.example.ferreteria"/>
 </manifest>

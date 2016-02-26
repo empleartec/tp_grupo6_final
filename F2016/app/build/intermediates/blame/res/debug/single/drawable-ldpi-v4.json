@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon.png",
-        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/drawable-ldpi/icon.png"
+        "merged": "/home/pimpo/AndroidStudioProjects/Articulo/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
+        "source": "/home/pimpo/AndroidStudioProjects/Articulo/app/src/main/res/drawable-ldpi/ic_launcher.png"
     },
     {
-        "merged": "/home/pimpo/AndroidStudioProjects/login2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/icon.png",
-        "source": "/home/pimpo/AndroidStudioProjects/login2/app/src/main/res/drawable-ldpi/icon.png"
+        "merged": "/home/pimpo/AndroidStudioProjects/F2016/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
+        "source": "/home/pimpo/AndroidStudioProjects/F2016/app/src/main/res/drawable-ldpi/ic_launcher.png"
     }
 ]
