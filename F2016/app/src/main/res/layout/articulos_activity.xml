@@ -4,15 +4,7 @@
     android:layout_height="fill_parent"
     android:background="#5959f2">
 
-    <AbsoluteLayout
-    android:id="@+id/Descrp_art"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true">
-
-        <EditText
+     <EditText
         android:id="@+id/art_SKU"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
@@ -22,7 +14,9 @@
         android:numeric="integer"
         android:maxLength="13"
         android:autoText="false"
-        android:hint="Codigo" />
+        android:hint="Codigo"
+         android:layout_alignParentTop="true"
+         android:layout_alignLeft="@+id/desc_art" />
     <EditText
         android:id="@+id/desc_art"
         android:layout_width="275dp"
@@ -33,21 +27,20 @@
         android:hint="Descripcion"
         android:capitalize="sentences"
 
-        android:focusable="true" />
+        android:focusable="true"
+        android:layout_above="@+id/txt_art_select"
+        android:layout_alignLeft="@+id/txt_art_select" />
 
-
-
-
-
-
-        <GridView
+       <GridView
             android:layout_width="wrap_content"
-            android:layout_height="259dp"
+            android:layout_height="159dp"
             android:id="@+id/gridViewArt"
             android:numColumns="3"
             android:layout_x="2dp"
             android:layout_y="121dp"
-            android:background="#0c3f70" />
+            android:background="#0c3f70"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentLeft="true" />
 
         <TextView
             android:layout_width="345dp"
@@ -55,7 +48,9 @@
             android:text="New Text"
             android:id="@+id/txt_art_select"
             android:layout_x="22dp"
-            android:layout_y="441dp" />
+            android:layout_y="441dp"
+            android:layout_above="@+id/gridViewArt"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -64,7 +59,10 @@
             android:id="@+id/btn_retorna"
             android:layout_x="12dp"
             android:layout_y="394dp"
-            android:onClick="retorna_articulo" />
+            android:onClick="retorna_articulo"
+            layout_alignTop="@+id/txt_art_select"
+            android:layout_alignBottom="@+id/txt_art_select"
+            android:layout_toRightOf="@+id/txt_art_select" />
 
         <ImageButton
             android:id="@+id/bto_busCod2"
@@ -72,24 +70,20 @@
             android:layout_height="wrap_content"
             android:layout_x="0dp"
             android:layout_y="32dp"
-            android:src="@android:drawable/ic_menu_search" />
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_alignTop="@+id/desc_art"
+            android:layout_toLeftOf="@+id/desc_art" />
 
         <ImageButton
             android:id="@+id/bto_busDesc"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:layout_x="1dp"
             android:layout_y="80dp"
-            android:src="@android:drawable/ic_menu_search"/>
+            android:src="@android:drawable/ic_menu_search" android:layout_width="wrap_content"
+            android:layout_above="@+id/bto_busCod2"
+            android:layout_alignLeft="@+id/bto_busCod2" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:layout_x="279dp"
-            android:layout_y="35dp"
-            android:src="@android:drawable/ic_menu_camera" />
 
-    </AbsoluteLayout>
 
 </RelativeLayout>
