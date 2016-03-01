@@ -100,7 +100,7 @@ public class Activity_Configuracion extends Activity {
                 return true;
                 
             case R.id.menu_acerca_de:
-            	visitarURL("http://www.ajpdsoft.com");
+            	visitarURL("http://www.pimpo.com");
                 return true;               
                 
             default:

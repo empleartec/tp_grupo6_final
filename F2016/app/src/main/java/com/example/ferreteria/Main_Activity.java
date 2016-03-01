@@ -1,5 +1,6 @@
 package com.example.ferreteria;
 
+import android.content.ActivityNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
@@ -37,7 +38,11 @@ public class Main_Activity extends Activity
 	private CheckBox chbSQLModificacion;
 	static Connection conexionMySQL;
 	String[] listaCatalogos;
-		
+
+	static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
+	public TextView txt_codigoLeiodo;
+
+
 	@Override
     public void onCreate(Bundle savedInstanceState) 
 	{
@@ -52,6 +57,8 @@ public class Main_Activity extends Activity
         buttonEjecutar = (Button) findViewById(R.id.btEjecutar);
         buttonCatalogos = (Button) findViewById(R.id.btCatalogos);
         chbSQLModificacion = (CheckBox) findViewById(R.id.opConsultaModificacion);
+
+		//txt_codigoLeiodo= (TextView)findViewById(R.id.txt_codigoLeiodo);
         
         //Botón para mostrar lista de catálogos (bases de datos) de MySQL
         buttonCatalogos.setOnClickListener(new View.OnClickListener() 
@@ -416,4 +423,60 @@ public class Main_Activity extends Activity
 		Intent i = new Intent(Main_Activity.this,Activity_Pedidos.class);
 		startActivity(i);
 	}
+	public void leer_codigoB(View vista)
+	{
+		try {
+			Intent intent = new Intent(ACTION_SCAN);
+			intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
+			startActivityForResult(intent, 0);
+		} catch (ActivityNotFoundException anfe) {
+			showDialog(Main_Activity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+		}
+	}
+
+
+	private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
+
+		AlertDialog.Builder downloadDialog = new AlertDialog.Builder(act);
+		downloadDialog.setTitle(title);
+		downloadDialog.setMessage(message);
+		downloadDialog.setPositiveButton(buttonYes, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialogInterface, int i) {
+				Uri uri = Uri.parse("market://search?q=pname:" + "com.google.zxing.client.android");
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				try {
+					act.startActivity(intent);
+				} catch (ActivityNotFoundException anfe) {
+
+				}
+			}
+		});
+		downloadDialog.setNegativeButton(buttonNo, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialogInterface, int i) {
+			}
+		});
+		return downloadDialog.show();
+	}
+
+
+	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+		if (requestCode == 0) {
+			if (resultCode == RESULT_OK) {
+				String contents = intent.getStringExtra("SCAN_RESULT");
+				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
+				String codigo= contents.toString();
+				txt_codigoLeiodo.setText(codigo);
+				Toast toast = Toast.makeText(this, "Content:" + contents + " Format:" + format, Toast.LENGTH_LONG);
+				toast.show();
+			}
+		}
+	}
+
+	public void lee_camara(View view) {
+		Intent i = new Intent(Main_Activity.this,
+				CodbarActivity.class);
+		startActivity(i);
+
+	}
+
 }

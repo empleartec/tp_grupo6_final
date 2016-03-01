@@ -40,13 +40,13 @@ public class login2 extends Activity {
             	String response = null;
             	try {
                     //en local mimaquina
-            	    //response = CustomHttpClient.executeHttpPost("http://10.0.0.201:8080/F2016/androidres.do", postParameters);
+            	    //response = CustomHttpClient.executeHttpPost("http://10.0.0.21:8080/F2016/AndroidResponse", postParameters);
 
                     //desde afuera
                     //response = CustomHttpClient.executeHttpPost("http://pimpo.mooo.com/F2016/AndroidResponse", postParameters);
 
-                    //en casa o local
-                    response = CustomHttpClient.executeHttpPost("http://10.0.0.21:8080/F2016/AndroidResponse", postParameters);
+                    //en curso ver ifconfig
+                    response = CustomHttpClient.executeHttpPost("http://10.54.11.133:8080/F2016/AndroidResponse", postParameters);
 
 
 

@@ -3,11 +3,17 @@ package com.example.ferreteria;
 /**
  * Created by pimpo on 01/02/16.
  */
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -42,19 +48,29 @@ public class Activity_Articulo extends Activity {
     private TextView art_sel;
     public Articulo art_pedido;
 
+
+    private static final String BS_PACKAGE = "com.google.zxing.client.android";
+    public static final int REQUEST_CODE = 0x0000c0de;
+    private Activity activity;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.articulos_activity);
+        activity=this;
         art_pedido=new Articulo();
         initData();
         initView();
 
 
+        if (savedInstanceState != null) {
+            String codigo = savedInstanceState.getString("key");
+
+        }
 
        // conectarBDMySQL(usuarioMySQL, contrasenaMySQL, ipServidorMySQL, puertoMySQL, catalogoMySQL);
 
-       buttonBuscarSKU = (ImageButton) findViewById(R.id.bto_busCod2);
+       buttonBuscarSKU = (ImageButton) findViewById(R.id.btn_art_SKU);
 
         buttonDescripcion = (ImageButton) findViewById(R.id.bto_busDesc);
         atrSKU = (TextView) findViewById(R.id.art_SKU);
@@ -66,24 +82,19 @@ public class Activity_Articulo extends Activity {
         //marcaMuesta = (TextView) findViewById(R.id.marca_mues);
 
         //Creo los lisener de los botonas
-        // buttonBuscarSKU.setOnClickListener(new View.OnClickListener() {
+         //buttonBuscarSKU.setOnClickListener(new View.OnClickListener() {
 
-        buttonBuscarSKU.setOnClickListener(new View.OnClickListener()
-        {
+             buttonBuscarSKU.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                try
-                {
-                    atrSKU.setText("1000101005019");
-                    Toast.makeText(getApplicationContext(),"Buscando por codigo" , Toast.LENGTH_SHORT).show();
-                    String sqlEjscuar="SELECT * FROM Ferreteria.T001_ARTICULOS where txt_ARTICULO_SKU='"+atrSKU.getText() +"'";
-                    String rst=ejecutarConsultaSQL(sqlEjscuar);
+            public void onClick(View v) {
+                try {
+                    //atrSKU.setText("1000101005019");
+                   // Toast.makeText(getApplicationContext(), "Buscando por codigo", Toast.LENGTH_SHORT).show();
+                    String sqlEjscuar = "SELECT * FROM Ferreteria.T001_ARTICULOS where txt_ARTICULO_SKU='" + atrSKU.getText() + "'";
+                    String rst = ejecutarConsultaSQL(sqlEjscuar);
                     desMuestra.setText(rst);
 
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     Toast.makeText(getApplicationContext(),
                             "Error: " + e.getMessage(),
                             Toast.LENGTH_SHORT).show();
@@ -139,6 +150,13 @@ public class Activity_Articulo extends Activity {
 
 
 
+    }
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("key", "value");
     }
 
     public void conectarBDMySQL (String usuario, String contrasena,
@@ -248,10 +266,95 @@ public class Activity_Articulo extends Activity {
         // put the message in Intent
      //->ok   intentMessage.putExtra("MESSAGE", message);
         // Set The Result in Intent
-        setResult(2,intentMessage);
+        setResult(2, intentMessage);
         // finish The activity
         finish();
 
     }
 
-    }//fin
+    /* tema de la camara lee el codigo de barra*/
+    public void leer_codigoB(View v)
+    {
+        Intent intentScan = new Intent(BS_PACKAGE + ".SCAN");
+        intentScan.putExtra("PROMPT_MESSAGE", "Enfoque entre 9 y 11 cm.viendo sólo el código de barras");
+        String targetAppPackage = findTargetAppPackage(intentScan);
+        if (targetAppPackage == null) {
+            showDownloadDialog();
+        } else startActivityForResult(intentScan, REQUEST_CODE);
+    }
+
+
+
+private String findTargetAppPackage(Intent intent) {
+
+    PackageManager pm = activity.getPackageManager();
+        List<ResolveInfo> availableApps = pm.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        if (availableApps != null) {
+        for (ResolveInfo availableApp : availableApps) {
+        String packageName = availableApp.activityInfo.packageName;
+        if (BS_PACKAGE.contains(packageName)) {
+        return packageName;
+        }
+        }
+        }
+        return null;
+        }
+private AlertDialog showDownloadDialog() {
+final String DEFAULT_TITLE = "Instalar Barcode Scanner?";
+final String DEFAULT_MESSAGE =
+        "Esta aplicación necesita Barcode Scanner. Quiere instalarla?";
+final String DEFAULT_YES = "Si";
+final String DEFAULT_NO = "No";
+
+        AlertDialog.Builder downloadDialog = new AlertDialog.Builder(activity);
+        downloadDialog.setTitle(DEFAULT_TITLE);
+        downloadDialog.setMessage(DEFAULT_MESSAGE);
+        downloadDialog.setPositiveButton(DEFAULT_YES, new DialogInterface.OnClickListener() {
+@Override
+public void onClick(DialogInterface dialogInterface, int i) {
+        Uri uri = Uri.parse("market://details?id=" + BS_PACKAGE);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+        activity.startActivity(intent);
+        } catch (ActivityNotFoundException anfe) {
+        // Hmm, market is not installed
+        Toast.makeText(Activity_Articulo.this, "Android market no esta instalado,no puedo instalar Barcode Scanner", Toast.LENGTH_LONG).show();
+        }
+        }
+        });
+        downloadDialog.setNegativeButton(DEFAULT_NO, new DialogInterface.OnClickListener() {
+@Override
+public void onClick(DialogInterface dialogInterface, int i) {}
+        });
+        return downloadDialog.show();
+        }
+
+
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                String contents = intent.getStringExtra("SCAN_RESULT");
+                String formatName = intent.getStringExtra("SCAN_RESULT_FORMAT");
+                byte[] rawBytes = intent.getByteArrayExtra("SCAN_RESULT_BYTES");
+                int intentOrientation = intent.getIntExtra("SCAN_RESULT_ORIENTATION", Integer.MIN_VALUE);
+                Integer orientation = intentOrientation == Integer.MIN_VALUE ? null : intentOrientation;
+                String errorCorrectionLevel = intent.getStringExtra("SCAN_RESULT_ERROR_CORRECTION_LEVEL");
+                Toast.makeText(this, contents, Toast.LENGTH_LONG).show();
+
+                atrSKU.setText(contents);
+
+                //buttonBuscarSKU.setOnClickListener(dispatchKeyEvent( KeyEvent.KEYCODE_ENTER)  );
+
+                String sqlEjscuar = "SELECT * FROM Ferreteria.T001_ARTICULOS where txt_ARTICULO_SKU='" + atrSKU.getText() + "'";
+                String rst = ejecutarConsultaSQL(sqlEjscuar);
+                desMuestra = (TextView) findViewById(R.id.desc_art);
+
+                //desMuestra.setText(rst);
+            }
+        }
+        return ;
+    }
+
+
+}//fin

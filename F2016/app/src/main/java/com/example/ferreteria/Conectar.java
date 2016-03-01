@@ -32,9 +32,9 @@ import com.google.gson.Gson;
  */
 public class Conectar extends Activity{
 
-    JSONParser jParser = new JSONParser();
+    //JSONParser jParser = new JSONParser();
 
-    JSONObject json;
+  //  JSONObject json;
 
     List<Pedidos> lista = new ArrayList<Pedidos>();
 

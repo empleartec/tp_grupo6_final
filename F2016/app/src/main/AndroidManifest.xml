@@ -19,17 +19,21 @@
         <activity
             android:name=".login2"
             android:label="@string/text_titulo_activity_principal" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+              </activity>
 
 
         <activity
             android:name=".Main_Activity"
+
             android:label="@string/text_titulo_activity_principal" >
+
+
 
         </activity>
 
@@ -67,6 +71,12 @@
         <activity
             android:name="com.example.ferreteria.Conectar"
             android:label="Coneto Pedido" >
+
+        </activity>
+
+        <activity
+            android:name="com.example.ferreteria.CodbarActivity"
+            android:label="Lector de baara" >
 
         </activity>
     </application>

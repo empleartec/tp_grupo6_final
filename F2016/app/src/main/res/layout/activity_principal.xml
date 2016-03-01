@@ -84,7 +84,9 @@
         android:id="@+id/btn_articulo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:onClick="Trae_articulos" />
+        android:onClick="lee_camara"
+        android:visibility="invisible"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,4 +94,6 @@
         android:id="@+id/btn_pedidos"
 
         android:onClick="Trae_pedidos" />
+
+
 </RelativeLayout>

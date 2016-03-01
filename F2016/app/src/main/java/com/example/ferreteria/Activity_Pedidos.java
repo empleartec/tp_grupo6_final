@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
@@ -46,7 +47,8 @@ public class Activity_Pedidos extends Activity {
     private boolean guardar_pedido=true;
 
     int identificador=0;
-
+    public View rowdel;
+    public String artDesc;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +86,15 @@ public class Activity_Pedidos extends Activity {
         TextView[] tx = new TextView[10];
         TableRow[] tr = new TableRow[10];
         TableLayout tl = (TableLayout)findViewById(R.id.table_main_pedidos);
-            //genero los texview
+
+
+
+
+
+
+
+
+        //genero los texview
             tx[0] = new TextView(this);
             tx[1] = new TextView(this);
             tx[2] = new TextView(this);
@@ -93,6 +103,7 @@ public class Activity_Pedidos extends Activity {
             //tx[i].setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
             tx[0].setText(art_pedido.getTxt_ARTICULO_SKU());
             tx[1].setText(art_pedido.getTxt_DESCRIPCION());
+            //artDesc=art_pedido.getTxt_DESCRIPCION();
             tx[2].setText(cantidad.getText());
 
             tx[0].setEnabled(true);
@@ -103,6 +114,51 @@ public class Activity_Pedidos extends Activity {
             tr[0].addView(tx[1]);
             tr[0].addView(tx[2]);
 
+        /* boton de borrar */
+        final ImageButton btn_no = new ImageButton(this);
+        btn_no.setTag(art_pedido.getTxt_DESCRIPCION());
+        //btn_no.setImageResource(R.drawable.del);
+       btn_no.setImageResource(android.R.drawable.ic_delete);//presence_busy
+        //android:background="@android:color/transparent"
+        btn_no.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+
+        btn_no.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                // la row seleccionada
+                rowdel = (View) arg0.getParent();
+                /********************/
+
+                /**********************/
+
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Activity_Pedidos.this);
+                dialogo1.setTitle("Importante");
+                dialogo1.setMessage("¿ Desea eliminar este Articulo:\n" + btn_no.getTag().toString() + " ?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        confirmar_borro(true);
+                        /*row = (TableRow)findViewById(R.id.row);
+                        table.removeView(row);*/
+
+                    }
+                });
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        //cancelar();
+                    }
+                });
+                dialogo1.show();
+            }
+
+        });
+
+
+
+
+        tr[0].addView(btn_no);
             tl.addView(tr[0]);
             // armo el pedido
              Pedidos p= new Pedidos();
@@ -121,6 +177,23 @@ public class Activity_Pedidos extends Activity {
     }
 
 
+    public void confirmar_borro(boolean si) {
+        Toast t=Toast.makeText(this,"borro el articulo", Toast.LENGTH_SHORT);
+        t.show();
+        ViewGroup container = ((ViewGroup)rowdel.getParent());
+        // delete the row and invalidate your view so it gets redrawn
+        container.removeView(rowdel);
+        container.invalidate();
+
+
+        guardar_pedido=si;
+    }
+
+
+
+
+
+
     public void guardar_pedido(View v)
     {
         AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
@@ -132,7 +205,7 @@ public class Activity_Pedidos extends Activity {
                //en el curso
                      //String url = "http://10.54.11.133:8080/F2016/Jsp/Pedidos.jsp";
                 // en casa
-                String url ="http://10.0.0.21:8080/F2016/Jsp/Pedidos.jsp";
+                String url ="http://10.54.11.133:8080/F2016/Jsp/Pedidos.jsp";
                 try {
 
                     HttpClient client = new DefaultHttpClient();
@@ -150,11 +223,11 @@ public class Activity_Pedidos extends Activity {
                     res = res.replaceAll("\\s+", "");
                     //error.setText(res);
 
-                    if (res.equals("0")) {
+                    if (!res.equals("1")) {
                         //todo bien
-                        Toast t=Toast.makeText(Activity_Pedidos.this,"Pedido Guardo con exito, a limpiar el form", Toast.LENGTH_SHORT);
+                        Toast t=Toast.makeText(Activity_Pedidos.this,"Pedido Guardo con exito", Toast.LENGTH_SHORT);
                         t.show();
-
+                        BaciaPedido();
                     } else{
                         //error de grabado
                         Toast t=Toast.makeText(Activity_Pedidos.this,"No se gusrdo el pedigo-> "+ res , Toast.LENGTH_SHORT);
@@ -214,13 +287,17 @@ public class Activity_Pedidos extends Activity {
         {
             if(null!=data)
             {
+                art_pedido = (Articulo)data.getSerializableExtra("MESSAGE");
 
-              art_pedido = (Articulo)data.getSerializableExtra("MESSAGE");
+                String detalle=art_pedido.getTxt_DESCRIPCION();
 
-                // fetch the message String
-             //->   String message=data.getStringExtra("MESSAGE");
 
-                art_sel.setText(art_pedido.getTxt_DESCRIPCION());
+                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) // Configuration.ORIENTATION_LANDSCAPE
+                {
+                    detalle=detalle.substring(0,25);
+                }
+
+                art_sel.setText(detalle);
                 seteaControles(true);
                 //ped.setFecha(message);
             }
@@ -268,7 +345,7 @@ public boolean deceaGuardar ()
     public void guardar_pedidoOLD(View v) {
         if (deceaGuardar()) {
 
-            String url = "http://10.0.0.21:8080/F2016/Jsp/Pedidos.jsp";
+            String url = "http://10.54.11.133:8080/F2016/Jsp/Pedidos.jsp";
             try {
 
                 HttpClient client = new DefaultHttpClient();
@@ -309,5 +386,18 @@ public boolean deceaGuardar ()
         }
     }
 
+void BaciaPedido()
+{
+
+    Intent i = new Intent(this, Main_Activity.class );
+    startActivity(i);
+    finish();
+  /*  lista_pedido.clear();
+    TableLayout tl = (TableLayout)findViewById(R.id.table_main_pedidos);
+    tl.destroyDrawingCache();
+    tl.removeAllViews();*/
+
+
+}
 
 }

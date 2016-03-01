@@ -18,15 +18,16 @@
         android:hint="Codigo"
          android:drawableLeft="@android:drawable/ic_menu_search"
          android:layout_alignParentTop="true"
-         android:layout_alignParentLeft="true" />
+         android:layout_alignParentLeft="true"
+         android:layout_toLeftOf="@+id/btn_leer" />
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_leer"
         android:src="@android:drawable/ic_menu_camera"
         android:onClick="leer_codigoB"
-        android:layout_above="@+id/bto_busDesc"
-        android:layout_toRightOf="@+id/desc_art" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btn_art_SKU" />
     <EditText
         android:id="@+id/desc_art"
         android:layout_width="275dp"
@@ -40,7 +41,8 @@
 
         android:focusable="true"
         android:layout_below="@+id/art_SKU"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/bto_busDesc" />
 
        <GridView
             android:layout_width="wrap_content"
@@ -50,8 +52,9 @@
             android:layout_x="2dp"
             android:layout_y="121dp"
             android:background="#0c3f70"
-           android:layout_below="@+id/desc_art"
-           android:layout_alignParentLeft="true" />
+           android:layout_alignParentTop="true"
+           android:layout_alignParentRight="true"
+           android:layout_toRightOf="@+id/bto_busDesc" />
     <ImageButton
         android:id="@+id/btn_art_SKU"
 
@@ -60,7 +63,7 @@
         android:layout_y="80dp"
         android:src="@android:drawable/ic_menu_search" android:layout_width="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/desc_art" />
+        android:layout_toRightOf="@+id/desc_art" />
 
         <TextView
             android:layout_width="345dp"
@@ -70,8 +73,7 @@
             android:layout_x="22dp"
             android:layout_y="441dp"
             android:layout_below="@+id/gridViewArt"
-            android:layout_alignParentLeft="true"
-            android:layout_alignRight="@+id/btn_art_SKU" />
+            android:layout_alignParentRight="true" />
     <ImageButton
         android:id="@+id/bto_busDesc"
 
@@ -79,8 +81,8 @@
         android:layout_x="1dp"
         android:layout_y="80dp"
         android:src="@android:drawable/ic_menu_search" android:layout_width="wrap_content"
-        android:layout_alignTop="@+id/desc_art"
-        android:layout_toRightOf="@+id/btn_art_SKU" />
+        android:layout_below="@+id/art_SKU"
+        android:layout_toLeftOf="@+id/txt_art_select" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,8 +92,8 @@
             android:layout_y="394dp"
             android:onClick="retorna_articulo"
 
-            android:layout_alignTop="@+id/txt_art_select"
-            android:layout_alignParentRight="true" />
+            android:layout_below="@+id/gridViewArt"
+            android:layout_alignParentLeft="true" />
 
 
 </RelativeLayout>
